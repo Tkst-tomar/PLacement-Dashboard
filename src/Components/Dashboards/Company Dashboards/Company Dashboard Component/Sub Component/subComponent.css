@@ -1,0 +1,105 @@
+:root{
+    --Pending : #FCF876;
+    --Accepted : #2FA4FF;
+    --Rejected : #FF8585;
+}
+
+.jobDetails{
+    box-shadow: 0px 0px 10px black;
+    background-color: white;
+    border-radius: 20px;
+    height:none!important;
+    overflow: hidden;
+}
+
+.job{
+    box-shadow: 0px 0px 10px black;
+    background-color: white;
+    cursor: pointer;
+    margin-top: 20px!important;
+    margin-left: 2px!important;
+    transition: 0.3s;
+}
+
+.job:hover{
+    transform: scale(1.05);
+}
+
+.blur{
+    backdrop-filter: blur(10px);
+    padding: 100px 0px;
+    position: absolute;
+    top: -10%;
+    
+}
+
+.hiringData, .hiredStudent{
+    height: 85vh;
+    overflow: auto;
+}
+
+.rightBox{
+    height: 70vh;
+    overflow: auto;
+}
+
+.leftBox{
+    height: fit-content!important;
+}
+
+.applicationList{
+    padding: 5px 0px!important;
+    cursor: pointer;
+}
+
+.Pending{
+    background-color: var(--Pending);
+}
+
+.Rejected{
+    background-color: var(--Rejected);
+    color: white;
+}
+
+.Accepted{
+    background-color: var(--Accepted);
+    color: white;
+}
+
+.dpDownWidth{
+    width: 158px!important;
+}
+
+.rightBox .row{
+    margin-bottom: 10px!important;
+}
+
+.btnGrp{
+    padding-top: 20px!important;
+}
+
+.hiredInfo{
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hiredInfo:hover{
+    transform: scale(1.05);
+}
+
+.displayFullInfo{
+    display: flex;
+    justify-content: center;
+    /* border: 10px solid black; */
+    
+}
+
+.blur1{
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    position: absolute;
+    top: 0%;
+    z-index: +1;
+}

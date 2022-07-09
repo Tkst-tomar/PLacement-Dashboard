@@ -1,0 +1,26 @@
+.landingPage{
+    margin-top: 100px!important;
+}
+
+.landingPage a img, .landingPage a h2{
+    height: 200px;
+}
+
+.landingPage a img{
+    margin: 5px 0px;
+}
+
+.landingPage a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #3385c8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.landingPage a:hover{
+    transform: scale(1.25);
+}

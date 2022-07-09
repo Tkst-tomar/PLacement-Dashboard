@@ -1,0 +1,75 @@
+.companyImage {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.loadingImgBox {
+    width: 255px;
+    height: 255px;
+    /* border: 5px solid black; */
+    border-radius: 50%;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.loadingImgBox img {
+    position: absolute;
+    top: 53%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+}
+
+.dashSidebar {
+    position: fixed;
+    left: 5%;
+    /* top: 50px; */
+}
+
+.mainPage {
+    margin-left: 50px;
+    position: fixed;
+    height: 85vh;
+    overflow: auto;
+    overflow-x: hidden;
+    /* overflow:auto; */
+    right: 0%;
+
+}
+
+.desc {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.CompName {
+    text-align: center;
+}
+
+.companyDashboardSidebar {
+    padding: 0px !important;
+    height: 85vh;
+
+}
+
+.companyDashboardSidebarBody .listItem {
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+
+.companyDashboardSidebarBody .listItem:hover {
+    transform: scale(1.1);
+}
+
+.companyDashboardSidebarBody .listItem:hover i:last-child {
+    padding-left: 2px;
+    transform: scale(1.5, 1);
+}

@@ -1,0 +1,90 @@
+.studentDashboardheader {
+    border-bottom: 3px solid black;
+    cursor: default;
+}
+
+.jobBorder {
+    border: 2px solid black;
+}
+
+.JobApplied p {
+    margin-bottom: 0rem !important;
+}
+
+.jobDesc {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.jobDesc:hover {
+    opacity: 1;
+}
+
+.activeTab {
+    background-color: #B8FFF9;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.activeTab:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #2F86A6;
+}
+
+.notActive {
+    background-color: #FE8F8F;
+    cursor: not-allowed;
+}
+
+.bottomMargin {
+    margin-bottom: 0rem !important;
+}
+
+.viewProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayBlock {
+    display: none;
+}
+
+table {
+    cursor: default;
+}
+
+.dpDown {
+    height: fit-content !important;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.dpUp {
+    height: 0px !important;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.dp tbody th {
+    width: 50%;
+}
+
+.overflow-ellipse {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blur3{
+    backdrop-filter: blur(15px);
+    position: fixed;
+    top: 10%;
+    height: 90vh;
+}
+
+.masterBorder{
+    border: 2px solid black;
+    padding: 20px;
+    background-color: white!important;
+}

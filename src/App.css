@@ -1,0 +1,95 @@
+/* *{
+  overflow:hidden;
+} */
+
+body{
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+label{
+  padding-left:20px!important;
+}
+
+
+.messageDisplay{
+  width: fit-content;
+  padding: 10px 20px;
+  border: 1px solid white;
+  box-shadow: 5px 5px 5px #DC3545;
+  margin: 50px 0px;
+  position: absolute;
+  right: -10%;
+  top: 55%;
+  transform: translate(-100%,100%);
+  transition: 0.5s;
+  z-index: +2;
+  background-color: #DC3545;
+}
+
+.messageHide{
+  width: fit-content;
+  padding: 10px 20px;
+  border: 1px solid white;
+  box-shadow: 5px 5px 5px black;
+  margin: 50px 0px;
+  position: absolute;
+  right: 0%;
+  top: 55%;
+  transform: translate(100%,100%);
+  transition: 0.5s;
+  z-index: +2;
+  background-color: white;
+}
+
+.sample{
+  z-index: +1;
+}
+
+.msgHide{
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 50px 0px;
+  position: absolute;
+  right: 0px;
+  top: 25%;
+  transform: translate(100%,0%);
+  transition: 0.5s;
+  z-index: +2;
+  background-color: white;
+  border: 1px solid white;
+  color: white;
+  box-shadow: 3px 3px 5px white;
+}
+
+.err{
+  background-color: #DC3545;
+  border: 1px solid white;
+  color: white;
+  box-shadow: 3px 3px 5px #DC3545;
+}
+
+.success{
+  background-color: #198754;
+  border: 1px solid white;
+  color: white;
+  box-shadow: 3px 3px 5px #198754;
+}
+
+.msgShow{
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 50px 0px;
+  position: absolute;
+  right: 50%;
+  top: 25%;
+  transform: translate(100%,0%);
+  transition: 0.5s;
+  z-index: +2;
+}
+
+.boxValidation{
+  transition: 0.5s;
+}

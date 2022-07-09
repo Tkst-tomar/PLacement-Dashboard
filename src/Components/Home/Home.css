@@ -1,0 +1,31 @@
+.ImgBox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bgImage{
+    width: 400px;
+}
+.person1{
+    width: 180px;
+    position: absolute;
+    z-index: 1;
+    left: 18%;
+    top: 0%;
+  
+}
+.person2{
+    width: 180px;
+    position: absolute;
+    z-index: 1;
+    left: 18%;
+    bottom: -10%;
+}
+.person3{
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    right: 8%;
+    top: 25%;
+}

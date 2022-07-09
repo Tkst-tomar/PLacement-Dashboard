@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pdf Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+
+  :root {
+    --width: 800px
+  }
+
+  .signBox:hover{
+    /* transform: scale(1.5); */
+    opacity: 1;
+    border: 10px solid black;
+  }
+</style>
+
+<body>
+  <div class="container" id="callLetter" style="width: var(--width);overflow: hidden;font-size: 16px;">
+    <div class="row" style="justify-content: space-between;">
+      <div class="col-6" style="font-size: 20px;font-weight: 900;padding-bottom: 20px;display: flex;align-items:end;">
+        <%= title.name %>
+      </div>
+      <div class="col-3" style="display: flex;justify-content: end;padding-top: 20px;">
+        <img src="<%= title.img %>" alt="" style="width: 100px;">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6" style="padding-bottom: 20px;">
+        <%=title.address.line1%> <br>
+          <%=title.address.line2%> <br>
+            <%=title.address.line3%>
+              <%=title.address.dist%> <br>
+                <%=title.address.state%>
+                  <%=title.address.pin%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" style="padding-bottom: 16px;font-size: 20px;font-weight: 900;">
+        Dear <%=title.name%>,
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" style="text-align: justify;width: var(--width);">
+        <p>We are pleased to offer you the full-time position of <%=title.jobTitle%> at <%=title.compName%> with a start
+              date of <%=title.startingDate%>, contingent upon background check.We believe your skills and experience
+                are an excellent match for our company.
+        </p>
+        <p>In this role, <%=title.desc%>.</p>
+        <p>The annual starting salary for this position is <%=title.salary%> to be paid on a monthly basis in account
+            provided by you..</p>
+        <p>Your employment with <%=title.compName%> will be on an at-will basis, which means you and the company are
+            free to terminate the employment relationship at any time for any reason. This letter is not a contract or
+            guarantee of employment for a definitive period of time.</p>
+        <p>As an employee of <%=title.compName%>, you are also eligible for our benefits program, which includes medical
+            insurance, 401(k), vacation time and other benefits which will be described in more detail in the
+            orientation package.</p>
+        <p>Please confirm your acceptance of this offer by signing and returning this letter by <%=title.expDate%>.
+        </p>
+        <p>We are excited to have you join our team! If you have any questions, please feel free to reach out at any
+          time.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        Sincerely, <br>
+        <div class="sign signBox" style="cursor: pointer;border: 2px solid black;padding: 10px;width: 200px;height:fit-content;margin-top: 10px;">
+          <p id="signMsg">Click in the box To Accept The Agreement</p>
+          <div id="displaySign" style="display: none;font-size: 27px;font-family: 'Inspiration', cursive;">
+            <%=title.name%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" style="padding-top: 5px;font-size: 20px;font-weight: 900;">
+        <%=title.name%> <br>
+          <%=title.jobTitle%> <br>
+      </div>
+    </div>
+    <div class="row" id="confirmBox" style="padding: 20px 15px;cursor:not-allowed; border: 2px solid black;width: fit-content;padding: 20px 15px;">
+      <table border="0" class="sign">
+        <tr>
+          <th>Signature:</th>
+          <td><span class="sign" style="font-family: 'Inspiration', cursive;">__________________</span>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <th>Printed Name:</th>
+          <td><span class="sign">______________________________</span>
+            <p></p>
+          </td>
+        </tr>
+        <tr>
+          <th>Date:</th>
+          <td><span class="sign">______________________________</span>
+            <p></p>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+    <div id="download" style="display: none;padding-top: 20px;">
+  
+      <h3>Generate Offer Letter</h3>
+      
+      <a href="/download" class="btn btn-danger" id="genButton">Generate Offer Letter</a>
+    </div>
+  </div>
+  <script>
+    const signBox = document.getElementsByClassName('sign')
+
+    const signature = document.getElementById('displaySign')
+
+    let valArray = []
+
+    const genButton = document.getElementById('genButton')
+
+    let letter = ''
+
+    signBox[0].onclick = () => {
+
+      signature.style.display = 'block'
+      signature.style.display = 'flex'
+      signature.style.justifyContent = 'center'
+
+      document.getElementById('signMsg').style.display = 'none'
+
+      valArray = ['Signed First']
+
+
+      // document.getElementById('confirmBox').style.display = 
+      document.getElementById('confirmBox').style.cursor = 'pointer'
+
+      
+    }
+    
+    signBox[1].onclick = () => {
+      if (valArray[0] == 'Signed First' && valArray.length == 1) {
+        signBox[2].innerText = '<%= title.name %>'
+        
+        signBox[3].innerText = '<%= title.name %>'
+        
+        signBox[4].innerText = new Date()
+        
+        document.getElementById('download').style.display = 'block'
+        letter = document.getElementById('callLetter').innerHTML
+        console.log(letter)
+      } else {
+
+      }
+    }
+    // export default valArray
+    // export default letter
+  </script>
+</body>
+
+</html>
